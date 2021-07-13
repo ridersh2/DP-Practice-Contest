@@ -3,7 +3,7 @@ using namespace std;
 typedef long long ll;
 
 int st, len, j, n, k, en;
-//st: start, en: end
+//st: start, en: end, len: length
 ll a[305], f[155][305][305];
 
 int main() {
@@ -27,7 +27,7 @@ int main() {
 			//delete a number
 			f[j][st][en] = max(f[j][st][en], max(f[j][st + 1][en], f[j][st][en - 1]));
 		}
-		cout << f[k][1][n];
+	cout << f[k][1][n];
 
 	return 0;
 }

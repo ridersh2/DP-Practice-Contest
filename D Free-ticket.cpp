@@ -18,7 +18,6 @@
 */
 #include<bits/stdc++.h>
 using namespace std;
-typedef long long ll;
 
 int n, i, j, f[5005][5005], cost[5005];
 
