@@ -7,7 +7,7 @@
 	if they only take one element f[i][j] = max(a[i] - f[i + 1][j], a[j] - f[i][j - 1])
 
 	now if they want take several consecutive numbers
-	f[i][j] = max(sum[i,l] - f[l + 1][j],sum[l,j] - f[i][l - 1]) for every j (take maximum)
+	f[i][j] = max(sum[i,l] - f[l + 1][j],sum[l,j] - f[i][l - 1]) for every l (take maximum)
 	and i != j != l (sum[x,y] mean sum from ax to ay)
 
 	you will have another 'for' to check the l
