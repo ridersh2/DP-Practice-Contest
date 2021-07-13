@@ -51,9 +51,11 @@ int main() {
 		}
 	}
 
-	//prefix_sum[n] = score1 + score2
-	//f[1][n] = score1 - score2
-	//==> (prefix_sum[n] + f[1][n]) / 2 = score1
+/*
+	prefix_sum[n] = score1 + score2
+	f[1][n] = score1 - score2
+	=> (prefix_sum[n] + f[1][n]) / 2 = score1
+*/
 	cout << (prefix_sum[n] + f[1][n]) / 2;
 
 	return 0;
