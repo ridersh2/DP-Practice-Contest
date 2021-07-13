@@ -23,7 +23,6 @@ int n, i, j, l;
 ll f[205][205], a[205], prefix_sum[205], sum;
 
 int main() {
-
 	cin >> n;
 	for(i = 1; i <= n; ++i) {
 		cin >> a[i];
@@ -38,15 +37,13 @@ int main() {
 		//if l = j mean only take last element
 		for(l = i; l <= j; ++l) {
 
-			if(l != j) {
-				sum = prefix_sum[l] - prefix_sum[i - 1];
-				f[i][j] = max(f[i][j],sum - f[l + 1][j]);
-			}
+			//take from the left
+			sum = prefix_sum[l] - prefix_sum[i - 1];
+			f[i][j] = max(f[i][j],sum - f[l + 1][j]);
 
-			if(l != i) {
-				sum = prefix_sum[j] - prefix_sum[l - 1];
-				f[i][j] = max(f[i][j],sum - f[i][l - 1]);
-			}
+			//take from the right
+			sum = prefix_sum[j] - prefix_sum[l - 1];
+			f[i][j] = max(f[i][j],sum - f[i][l - 1]);
 
 		}
 	}
