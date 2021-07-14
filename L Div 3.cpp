@@ -2,6 +2,7 @@
 	f[i][j] is how many number that contain i digits and have sum modulo to 3 is j
 
 	from here you can dp like problem E (sum modulo to 3 instead of just sum)
+	note that you the digit in f must not be x
 
 	after that we will put k number x to f[n - k][sum_k] (sum_k is sum of k number x modulo to 3)
 */
