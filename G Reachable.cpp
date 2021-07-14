@@ -1,7 +1,7 @@
 /*
 	f[i][j] : minimum price to block i positions in first j rows
 
-	lets say x is your current position you can only take those y position
+	lets say x is your current block position you can only block those y position
 
 	..  ..  ..  y.  .y
 	..  y.  .y  ..  ..
